@@ -24,11 +24,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "hello_world",
-      "src/hello_world.cpp"
+      "usagecheck_demo",
+      "src/usagecheck_demo.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/hello_world.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/hello_world"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/usagecheck_demo.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/usagecheck_demo"
   }
 ]
