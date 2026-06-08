@@ -15,8 +15,8 @@ vpath %.cc src
 vpath %.cpp src 
 vpath %.h includes 
 
-run : $(MFILE) $(HARGS)
-	$(COMPILE.c) $< $(HARGS)  -o ./bin/ch && ./bin/ch
+run : $(MFILE)
+	$(COMPILE.c) $<   -o ./bin/ch $(HFILE) && ./bin/ch 
 exec : $(OBJS) 
 	$(COMPILE.c) $(OBJS)  -o bin && ./bin  	
 object : $(MFILE) $(HARGS)
