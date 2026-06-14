@@ -9,21 +9,26 @@ C23 = -std=c23
 INCLUDES = -I includes -I src 
 COMPILE.cc = $(GCC) $(GCCFLAGS) $(INCLUDES) $(CPP23)
 COMPILE.c = $(GC) $(GCCFLAGS) $(INCLUDES) $(C23)
+COMPILE.cc = $(GPP) $(GCCFLAGS) $(INCLUDES) $(CPP23)
+OBJ_DIR = src
+OBJS = $(wildcard $(OBJ_DIR)/*.o)
 vpath %.c src 
 vpath %.cc src 
 vpath %.cpp src 
 vpath %.h includes 
 
-run : $(MFILE) $(HARGS)
-	$(COMPILE.cc) $<  -o $(FILE) && ./$(FILE)  
 
 runc : $(MCFILE) $(HARGS)
-	$(COMPILE.c) $<  -o $(FILE) && ./$(FILE)  
+	$(COMPILE.c) $<  -o $(FILE) && ./bin/$(FILE)  
+run : $(MFILE)
+	$(COMPILE.c) $<   -o ./bin/ch $(HFILE) && ./bin/ch 
+
+object : $(MFILE) $(HARGS)
+	$(COMPILE.c) -c  $< -o ./src/$(FILE).o
+
+oshared: $(MFILE) $(HARGS)
+	$(COMPILE.c) -fPIC -c  $< -o ./src/$(FILE).o
 create: 
-	touch src/$(MFILE) && touch src/$(MCFILE)
-pp: 
-	git add . && git commit -m "letsg"
-online: 
-	git commit origin main 
+	touch src/$(MCFILE)
 push : 
-	git add  . && git commit -m "mesas" && git push origin main
+	git add . && git commit -m"message " && git push origin main 
