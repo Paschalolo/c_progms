@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc-14",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wpedantic",
+      "-Wnull-dereference",
+      "-Wshadow",
+      "-mavx2",
+      "-Wconversion",
+      "-Wduplicated-branches",
+      "-Wlogical-op",
+      "-O3",
+      "-Wformat=2",
+      "-pthread",
+      "-mavx2",
+      "-march=native",
+      "-I",
+      "includes",
+      "-I",
+      "src",
+      "-std=c23",
+      "./src/file2.o",
+      "./src/file1.o",
+      "-o",
+      "./bin/ch",
+      "src/dyn_lib.c"
+    ],
+    "directory": "/home/paschalolo/studyWeb/sys_p",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/dyn_lib.c",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
+  }
+]

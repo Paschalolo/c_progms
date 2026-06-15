@@ -18,7 +18,7 @@ vpath %.h includes
 
 
 runc : $(MCFILE) $(HARGS)
-	$(COMPILE.c) $<  -o $(FILE) && ./bin/$(FILE)  
+	$(COMPILE.c) $<  -o ./bin/$(FILE) && ./bin/$(FILE)  
 run : $(MCFILE)
 	$(COMPILE.c) $<   -o ./bin/ch $(HFILE) && ./bin/ch 
 clean : 
