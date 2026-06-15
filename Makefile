@@ -20,7 +20,7 @@ vpath %.h includes
 runc : $(MCFILE) $(HARGS)
 	$(COMPILE.c) $<  -o ./bin/$(FILE) && ./bin/$(FILE)  
 run : $(MCFILE)
-	$(COMPILE.c) $<   -o ./bin/ch $(HFILE) && ./bin/ch 
+	$(COMPILE.c) $<   $(HFILE) -o ./bin/ch && ./bin/ch 
 clean : 
 	rm -rf *.o
 object : $(MCFILE) $(HARGS)

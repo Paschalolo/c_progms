@@ -15,13 +15,13 @@ int main([[maybe_unused]] int argc , [[maybe_unused]] char** argv){
 	}
 	typedef union func_t {
 		void* ptr ; 
-		void (*func1)(int); 
+		int (*func1)(int); 
 	}func_t;
 	func_t yh ={ NULL}; 
 
 	yh.ptr = pdy_symbol(argv[2]); 
-	yh.func1(88);
-
+	int va =  yh.func1(88);
+	printf("%d", va);
 	close_libary();
 	
 	printf("finito");

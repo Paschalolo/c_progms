@@ -1,6 +1,5 @@
-#include <stdio.h>
 
 
-void pboi(int i){
-	printf("Function func1 was called %d", i );
+int  pboi(int i){
+	return i *i;
 }
