@@ -9,7 +9,6 @@ C23 = -std=c23
 INCLUDES = -I includes -I src 
 COMPILE.cc = $(GCC) $(GCCFLAGS) $(INCLUDES) $(CPP23)
 COMPILE.c = $(GC) $(GCCFLAGS) $(INCLUDES) $(C23)
-COMPILE.cc = $(GPP) $(GCCFLAGS) $(INCLUDES) $(CPP23)
 OBJ_DIR = src
 OBJS = $(wildcard $(OBJ_DIR)/*.o)
 vpath %.c src 
@@ -20,12 +19,16 @@ vpath %.h includes
 
 runc : $(MCFILE) $(HARGS)
 	$(COMPILE.c) $<  -o $(FILE) && ./bin/$(FILE)  
-run : $(MFILE)
+run : $(MCFILE)
 	$(COMPILE.c) $<   -o ./bin/ch $(HFILE) && ./bin/ch 
-
-object : $(MFILE) $(HARGS)
+clean : 
+	rm -rf *.o
+object : $(MCFILE) $(HARGS)
 	$(COMPILE.c) -c  $< -o ./src/$(FILE).o
 
+special : 
+	@echo "Here we are"
+	@echo "wassup "
 oshared: $(MFILE) $(HARGS)
 	$(COMPILE.c) -fPIC -c  $< -o ./src/$(FILE).o
 create: 
