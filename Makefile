@@ -16,6 +16,8 @@ vpath %.cc src
 vpath %.cpp src 
 vpath %.h includes 
 
+# Path for the linker for dynamic libaaries 
+# e.g ccc src/uselink.c -L lib/ -I lib/ -ltst1 -Wl,-rpath,lib/
 
 runc : $(MCFILE) $(HARGS)
 	$(COMPILE.c) $<  -o ./bin/$(FILE) && ./bin/$(FILE)  
