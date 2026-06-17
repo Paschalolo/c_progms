@@ -23,14 +23,12 @@
       "-I",
       "src",
       "-std=c23",
-      "./src/file2.o",
-      "./src/file1.o",
       "-o",
       "./bin/ch",
-      "src/dyn_lib.c"
+      "src/read.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/dyn_lib.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/read.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
