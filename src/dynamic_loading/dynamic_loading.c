@@ -13,7 +13,7 @@ struct Symbols{
 	size_t sz ; 
 };
 
-static struct  Symbols ssy = {NULL, 0};
+static __attribute__((aligned(64))) struct  Symbols ssy = {NULL, 0};
 enum P_ERRORS : int{
 	SUCCESS = 0,
 	FAILED = -1,
