@@ -25,10 +25,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/read.c"
+      "src/copy.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/read.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/copy.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]

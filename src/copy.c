@@ -28,12 +28,12 @@ int main(int argc , char** argv){
 	}
 
 	/* Open the input file for read only */ 
-	infd = open(infname , O_RDONLY);
+	infd = open(infname , O_RDONLY , S_IRUSR | S_IWUSR);
 	if(infd == -1) {fprintf(stderr, "opening file failes"); return -2; }
 	/* open the output fie for write only 
 	 *	create it if it does not exist and Trincate the file 
 	 * */
-	outfd = open(outfname , (O_WRONLY |O_TRUNC | O_CREAT ));
+	outfd = open(outfname , (O_WRONLY |O_TRUNC | O_CREAT ), S_IRUSR | S_IWUSR);
 	if(outfd == -1 ) {
 		fprintf(stderr, "opening outfile failed");
 		close(infd) ; 
