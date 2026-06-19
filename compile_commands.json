@@ -25,10 +25,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/linkat.c"
+      "src/unlink.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/linkat.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/unlink.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
