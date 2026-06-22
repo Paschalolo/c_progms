@@ -25,10 +25,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/getpid.c"
+      "src/system.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/getpid.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/system.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
