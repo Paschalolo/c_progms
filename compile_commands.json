@@ -25,10 +25,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/chmod.c"
+      "src/sig_default.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/chmod.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/sig_default.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
