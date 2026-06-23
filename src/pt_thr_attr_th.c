@@ -26,5 +26,10 @@ void print_pthread_attr(pthread_attr_t* attr){
 	}
 
 	/* get and print inherit sceduler */
-	
+	ret = pthread_attr_getstack(attr , &stackaddr , &stksz);
+
+	if(ret == 0 ) {
+		printf("Stack addresses = %p\n", stackaddr);
+		printf("Stack size  = %lu\n", stksz);
+	}
 }
