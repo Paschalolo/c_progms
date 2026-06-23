@@ -25,10 +25,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/system.c"
+      "src/pt_create.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/system.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/pt_create.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
