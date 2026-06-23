@@ -48,7 +48,12 @@ std::uint64_t get_physical_address(std::uint64_t cr3_phys , std::uint64_t v_addr
 		auto page1gb_physical_addr = p3e & 0xFFFFFC0000000ULL;
 		return (page1gb_physical_addr | page1gb_offset); 
 	}
-
+	/*Branchless */
+	/* 
+	auto page1gb_offset = v_addr & 0x7FFFFFFF;                                                                   
+   	auto page1gb_physical_addr = p3e & 0xFFFFFC0000000ULL;
+	auto mask_1gb = static_cast<std::uint64_t>(static_cast<std::int64_t>(~(p3e & PAGE_BIT))  >> 1 )  ; 
+*/
 	/* p2 table walk */ 
 
 	auto p2_physical_addr = physical_to_virtual((p3e & PHYSICAL_PAGE_MASK)); 
