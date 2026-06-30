@@ -52,7 +52,7 @@ int main(int argc , char** argv ){
 	}
 	memset((void*)&srvaddr, 0X00,srvaddr_lem );
 	srvaddr.sin_family = AF_INET ; 
-	srvaddr.sin_port = portnum ;
+	srvaddr.sin_port = htons(portnum) ;
 	srvaddr.sin_addr.s_addr = htonl(INADDR_ANY);
 
 
