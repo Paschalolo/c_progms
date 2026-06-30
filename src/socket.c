@@ -44,5 +44,47 @@ int main(){
 		printf("ipprotocol tcp exist");
 		close(sockfd);
 	}
+
+	sockfd = socket(AF_INET , SOCK_DGRAM , IPPROTO_UDP);
+	if(sockfd == -1 ){
+		end_all(-1, "socket() ipproto udp does not exist\n"); 
+	}else {
+		printf("ipproto_udp exists\n");
+		close(sockfd) ; 
+	}
+
+	sockfd = socket(AF_UNIX ,SOCK_STREAM , 0 ); 
+	if(sockfd == -1 ){
+		end_all(-1, "Not exist\n"); 
+	}else {
+		printf("exists\n");
+		close(sockfd) ; 
+	}
+
+	sockfd = socket(AF_UNIX , SOCK_DGRAM , 0 );
+	if(sockfd == -1 ){
+		end_all(-1, "Not exist\n"); 
+	}else {
+		printf("exists\n");
+		close(sockfd) ; 
+	}
+
+	sockfd = socket(AF_UNIX , SOCK_SEQPACKET , 0); 
+
+	if(sockfd == -1 ){
+		end_all(-1, "Not exist\n"); 
+	}else {
+		printf("exists\n");
+		close(sockfd) ; 
+	}
+
+	sockfd = socket(AF_INET , SOCK_RAW , 0) ;
+
+	if(sockfd == -1 ){
+		end_all(-1, "sock raw not allowed \n"); 
+	}else {
+		printf("sock raw allowed exists\n");
+		close(sockfd) ; 
+	}
 	return 0;
 }
