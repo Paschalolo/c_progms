@@ -13,4 +13,10 @@
 #include <stdlib.h>
 
 
+constexpr int BUFLEN = 1024 ; 
+constexpr int DES_PORT = 2345 ;  
+[[maybe_unused]] constexpr int MAXMSGS =3 ; 
+#define IPV4LOCALADDR "127.0.0.0"
+
+
 #endif
