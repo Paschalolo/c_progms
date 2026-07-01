@@ -25,10 +25,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/socket.c"
+      "src/udpclt_conn_all.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/socket.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/udpclt_conn_all.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]

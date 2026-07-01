@@ -88,9 +88,19 @@ int main(int argc , char** argv ){
 		if (ret > 0) {
 			/* Get server reply */ 
 			inbuf[0] = 0x00 ;
-			ret = recvfrom(sfd , (void* restrict )inbuf , BUFLEN);
-	
+			ret = recvfrom(sfd , (void* restrict )inbuf , 1024 , 0 , (struct sockaddr*)&fromaddr, (socklen_t*)&fromaddrsz);
+		if(ret > 0){
+			inbuf[ret] = 0x00; 
+			printf("Received the following from serve r\n%s", inbuf);
+		}else{
+			if(ret == 0){
+			printf("Recieved Warning Zero bytes recieved from server ");	
+			}else {
+				fprintf(stderr, "Failed recvfrom and sendto\n");
+			}
 		}
-	}
-	return 0; 
+		sleep(1);
+		}
+	}}
+	return 0;
 }
