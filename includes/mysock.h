@@ -1,3 +1,6 @@
+/*
+ *	invlude File for projects 
+ * */
 #ifndef MY_SOC 
 #define MY_SOC
 #include <stddef.h>
@@ -11,6 +14,10 @@
 #include <string.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <netdb.h>
+#include 
 
 
 constexpr int BUFLEN = 1024 ; 
