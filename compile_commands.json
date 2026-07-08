@@ -25,10 +25,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/tcp_buf.c"
+      "src/mydsitlib.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/tcp_buf.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/mydsitlib.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
