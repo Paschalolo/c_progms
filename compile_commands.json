@@ -25,10 +25,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/udpclt_conn_all.c"
+      "src/tcp_buf.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/udpclt_conn_all.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/tcp_buf.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
