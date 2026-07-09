@@ -6,7 +6,8 @@ GC = gcc-14
 GCCFLAGS = -Wall -Wextra -Werror -Wpedantic -Wnull-dereference  -Wshadow -mavx2 -Wconversion -Wduplicated-branches -Wlogical-op -O3  -Wformat=2   -pthread -mavx2 -march=native 
 CPP23 = -std=c++23
 C23 = -std=c23 
-INCLUDES = -I includes -I src 
+INCLUDES = -I includes -I src
+SSL = -lssl -lcrypto
 COMPILE.cc = $(GCC) $(GCCFLAGS) $(INCLUDES) $(CPP23)
 COMPILE.c = $(GC) $(GCCFLAGS) $(INCLUDES) $(C23)
 OBJ_DIR = src
@@ -23,6 +24,8 @@ runc : $(MCFILE) $(HARGS)
 	$(COMPILE.c) $<  -o ./bin/$(FILE) && ./bin/$(FILE)  
 run : $(MCFILE)
 	$(COMPILE.c) $<   $(HFILE) -o ./bin/ch && ./bin/ch 
+run1 : $(MCFILE)
+	$(COMPILE.c)  $<   $(HFILE) $(SSL) -o ./bin/ch && ./bin/ch 
 clean : 
 	rm -rf *.o
 object : $(MCFILE) $(HARGS)
