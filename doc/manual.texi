@@ -1,0 +1,38 @@
+\input texinfo
+@setfilename manual.info
+@settitle System Architecture Manual
+
+@copying
+Copyright @copyright{} 2026 Sovereign Systems.
+Licensed under GPLv3.
+@end copying
+
+@titlepage
+@title System Architecture Manual
+@subtitle High-Performance Engineering from First Principles
+@author Paschal Ahanmisi
+@page
+@insertcopying
+@end titlepage
+
+@contents
+
+@node Top
+@top System Manual Overview
+
+Welcome to the systems blueprint documentation.
+
+@menu
+* Introduction::        Core architecture goals.
+* Memory Management::   Low-level allocation mechanics.
+@end menu
+
+@node Introduction
+@chapter Introduction
+This manual outlines how to build hyper-optimized software.
+
+@node Memory Management
+@chapter Memory Management
+Direct hardware interaction requires ignoring standard abstractions.
+
+@bye

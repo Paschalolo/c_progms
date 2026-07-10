@@ -36,6 +36,10 @@ special :
 	@echo "wassup "
 oshared: $(MFILE) $(HARGS)
 	$(COMPILE.c) -fPIC -c  $< -o ./src/$(FILE).o
+
+doc:
+	texi2pdf doc/manual.texi -o doc/manual.pdf
+
 create: 
 	touch src/$(MCFILE)
 push : 
