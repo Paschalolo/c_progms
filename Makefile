@@ -42,5 +42,7 @@ doc:
 
 create: 
 	touch src/$(MCFILE)
+createc: 
+	touch src/$(MFILE)
 push : 
 	git add . && git commit -m"message " && git push origin main 
