@@ -26,10 +26,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/multiple_io.c"
+      "src/poll_io.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/multiple_io.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/poll_io.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
