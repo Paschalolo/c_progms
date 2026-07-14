@@ -18,6 +18,7 @@
       "-pthread",
       "-mavx2",
       "-march=native",
+      "-fno-exceptions",
       "-I",
       "includes",
       "-I",
@@ -25,10 +26,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/digest_evp.c"
+      "src/open_madag.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/digest_evp.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/open_madag.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
