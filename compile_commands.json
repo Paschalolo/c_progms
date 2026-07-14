@@ -26,10 +26,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/open_madag.c"
+      "src/multiple_io.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/open_madag.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/multiple_io.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
