@@ -26,10 +26,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/buffered.c"
+      "src/ppid.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/buffered.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/ppid.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
