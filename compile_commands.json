@@ -26,10 +26,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/poll_io.c"
+      "src/buffered.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/poll_io.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/buffered.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
