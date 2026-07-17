@@ -26,10 +26,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/rlimti.c"
+      "src/tthre.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/rlimti.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/tthre.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
