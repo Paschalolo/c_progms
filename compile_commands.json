@@ -26,10 +26,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/ppid.c"
+      "src/getpri.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/ppid.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/getpri.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
