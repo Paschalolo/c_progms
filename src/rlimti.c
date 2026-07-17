@@ -13,5 +13,7 @@ int main(){
 	ret =getrlimit(RLIMIT_MEMLOCK, &rlt );
 	if(ret == -1){return -1;}
 	printf("Locked memroy limit : %ld\n", rlt.rlim_max);
+	ret =getrlimit(RLIMIT_CORE , &rlt );
+	printf(" cur : %ld , Max RLIMIT_CORE : %ld\n", rlt.rlim_cur , rlt.rlim_max);
 	return 0;
 }
