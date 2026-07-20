@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/getrcx",
-      "src/getrcx.cpp"
+      "./bin/core_dummp_seg",
+      "src/core_dummp_seg.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/getrcx.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/getrcx"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/core_dummp_seg.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/core_dummp_seg"
   }
 ]
