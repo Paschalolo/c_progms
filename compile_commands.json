@@ -1,7 +1,7 @@
 [
   {
     "arguments": [
-      "/usr/bin/gcc-14",
+      "/usr/bin/g++-14",
       "-c",
       "-Wall",
       "-Wextra",
@@ -23,13 +23,13 @@
       "includes",
       "-I",
       "src",
-      "-std=c23",
+      "-std=c++23",
       "-o",
-      "./bin/ch",
-      "src/bbrk.c"
+      "./bin/getrcx",
+      "src/getrcx.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/bbrk.c",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/getrcx.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/getrcx"
   }
 ]
