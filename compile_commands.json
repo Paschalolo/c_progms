@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/t3f",
-      "src/t3f.cpp"
+      "./bin/t3h",
+      "src/t3h.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/t3f.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/t3f"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/t3h.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/t3h"
   }
 ]
