@@ -2,7 +2,7 @@
 #include <csignal>
 #include <signal.h>
 #include <apie.h>
-
+#include <cstdio>
 static void sig_init(int);
 constexpr int MAXLINE = 256 ;
 int main(){
@@ -13,6 +13,10 @@ int main(){
 
 	if(signal(SIGINT , &sig_init) == SIG_ERR){
 		err_sys("signal  failure ");
+	}
+	printf("%%"); 
+	while(){
+
 	}
 	
 }
