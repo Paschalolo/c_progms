@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/core_dummp_seg",
-      "src/core_dummp_seg.cpp"
+      "./bin/rlimit_stack",
+      "src/rlimit_stack.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/core_dummp_seg.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/core_dummp_seg"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/rlimit_stack.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/rlimit_stack"
   }
 ]
