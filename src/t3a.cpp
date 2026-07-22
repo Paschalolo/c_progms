@@ -9,7 +9,8 @@ int main(){
 	char buf[BUFFSIZE] ; 
 
 	while((n= read(STDIN_FILENO, buf, BUFFSIZE)) > 0){
-		if(write(STDOUT_FILENO , buf , BUFFSIZE) != n){
+		buf[n] = 0x00 ;
+		if(write(STDOUT_FILENO , buf , static_cast<size_t>(n)) != n){
 			err_sys("write error");
 		}
 		if(n < 0 ) {
