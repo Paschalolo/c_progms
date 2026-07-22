@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/t3a",
-      "src/t3a.cpp"
+      "./bin/t3c",
+      "src/t3c.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/t3a.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/t3a"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/t3c.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/t3c"
   }
 ]
