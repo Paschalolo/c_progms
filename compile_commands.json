@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/rlimit_stack",
-      "src/rlimit_stack.cpp"
+      "./bin/ctest",
+      "src/ctest.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/rlimit_stack.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/rlimit_stack"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/ctest.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/ctest"
   }
 ]
