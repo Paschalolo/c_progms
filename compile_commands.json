@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/t3i",
-      "src/t3i.cpp"
+      "./bin/t4",
+      "src/t4.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/t3i.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/t3i"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/t4.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/t4"
   }
 ]
