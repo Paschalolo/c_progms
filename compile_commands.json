@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/ctest",
-      "src/ctest.cpp"
+      "./bin/ls_c",
+      "src/ls_c.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/ctest.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/ctest"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/ls_c.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/ls_c"
   }
 ]
