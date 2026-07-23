@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/t4",
-      "src/t4.cpp"
+      "./bin/std_io_ef",
+      "src/std_io_ef.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/t4.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/t4"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/std_io_ef.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/std_io_ef"
   }
 ]
