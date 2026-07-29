@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/daytime_clip6",
-      "src/daytime_clip6.cpp"
+      "./bin/daytimesrvip4",
+      "src/daytimesrvip4.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/daytime_clip6.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/daytime_clip6"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/daytimesrvip4.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/daytimesrvip4"
   }
 ]
