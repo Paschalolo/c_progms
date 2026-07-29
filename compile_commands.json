@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/argc1",
-      "src/argc1.cpp"
+      "./bin/daytime_cl",
+      "src/daytime_cl.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/argc1.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/argc1"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/daytime_cl.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/daytime_cl"
   }
 ]
