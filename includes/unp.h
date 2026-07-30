@@ -7,7 +7,9 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <arpa/inet.h>
-#include <cstdlib> 
+#include <cstdlib>
+#include <sys/utsname.h>
+
 constexpr size_t MAX_LINE = 1024 ; 
 constexpr size_t BACK_LOG = 100;
 
