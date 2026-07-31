@@ -11,7 +11,7 @@
 #include <sys/utsname.h>
 
 constexpr size_t MAX_LINE = 1024 ; 
-constexpr size_t BACK_LOG = 100;
+constexpr size_t BACK_LOG = 4096;
 
 void err_quit(const char* __restrict__ str ){
 	std::fprintf(stderr , "%s", str);
