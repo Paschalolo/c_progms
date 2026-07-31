@@ -9,7 +9,9 @@
 #include <arpa/inet.h>
 #include <cstdlib>
 #include <sys/utsname.h>
-
+#include <cstring>
+#include <arpa/inet.h>
+#include <time.h>
 constexpr size_t MAX_LINE = 1024 ; 
 constexpr size_t BACK_LOG = 4096;
 
