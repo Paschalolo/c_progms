@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/big_lend",
-      "src/big_lend.cpp"
+      "./bin/text_srv",
+      "src/text_srv.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/big_lend.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/big_lend"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/text_srv.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/text_srv"
   }
 ]
