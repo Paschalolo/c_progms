@@ -22,7 +22,7 @@ int main(){
 	std::memset(reinterpret_cast<void*>(&srvadr), 0x00 , sizeof srvadr);
 	/*bind connection */
 	srvadr.sin_addr.s_addr = INADDR_ANY ; 
-	srvadr.sin_port = htons(8080);
+	srvadr.sin_port = htons(13);
 	srvadr.sin_family = AF_INET ;
 	if(bind(listenfd , reinterpret_cast<const struct sockaddr *>(&srvadr), sizeof srvadr) == -1 ){
 		err_sys("bind() failed\n"); 
@@ -33,15 +33,17 @@ int main(){
 	}
 
 	for(;;){
-		connfd = connect(listenfd ,reinterpret_cast<const struct sockaddr*>(&clntaddr), len );
+		connfd = accept(listenfd ,reinterpret_cast<struct sockaddr*>(&clntaddr), &len );
+		if(connfd == -1) {
+			continue;
+		}
 		std::printf("connection from %s on port : %d\n" , inet_ntop(AF_INET , reinterpret_cast<const void*>(&clntaddr),buf , sizeof clntaddr) , static_cast<int>(ntohs(clntaddr.sin_port)));
 
 		ticks =time(nullptr);
 		snprintf(buf, MAX_LINE ,"%.24s \n" , ctime(&ticks));
 		ret = write(connfd , buf , std::strlen(buf));
-		if(ret == -1 ){
-			std::fprintf(stderr , "Write code failed");
-			continue ;
+		if(ret < 0){
+			printf("could not write\n");
 		}
 		close(connfd);
 	}

@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/text_srv",
-      "src/text_srv.cpp"
+      "./bin/daytimesrv1",
+      "src/daytimesrv1.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/text_srv.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/text_srv"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/daytimesrv1.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/daytimesrv1"
   }
 ]
