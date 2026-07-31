@@ -1,5 +1,7 @@
 
 
+#include <cstdio>
+#include <cstring>
 #include <netinet/in.h>
 #include <sys/socket.h>
 #include <unp.h>
@@ -11,7 +13,7 @@ int main(){
 	struct sockaddr_in srvadr , clntaddr ; 
 	char buf[MAX_LINE] ;
 	time_t ticks;
-
+	ssize_t ret ;
 	/* Make socket connection */ 
 	if((listenfd = socket(AF_INET , SOCK_STREAM ,0 )) == -1){
 		err_sys("socket() failed\n");
@@ -35,6 +37,12 @@ int main(){
 		std::printf("connection from %s on port : %d\n" , inet_ntop(AF_INET , reinterpret_cast<const void*>(&clntaddr),buf , sizeof clntaddr) , static_cast<int>(ntohs(clntaddr.sin_port)));
 
 		ticks =time(nullptr);
+		snprintf(buf, MAX_LINE ,"%.24s \n" , ctime(&ticks));
+		ret = write(connfd , buf , std::strlen(buf));
+		if(ret == -1 ){
+			std::fprintf(stderr , "Write code failed");
+			continue ;
+		}
 		close(connfd);
 	}
 	/* lisening to the port */
