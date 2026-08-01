@@ -16,6 +16,11 @@
 #include <time.h>
 constexpr size_t MAX_LINE = 1024 ; 
 constexpr size_t BACK_LOG = 4096;
+
+struct Binar_t {
+	long m_ab_; 
+	long g_; 
+};
 struct My_sockaddr_in_t {
 	My_sockaddr_in_t(sa_family_t  family , in_port_t port  ,in_addr_t addr) noexcept {
 			m_sockaddr.sin_family = family ; 

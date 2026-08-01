@@ -28,8 +28,9 @@ int main(){
 			std::fprintf(stderr , "Connection failed\n");
 			continue;
 		}
-			str_echo(connfd);
-			close(connfd) ; 
+		Binar_t bb{300 , 700};
+		[[maybe_unused]] ssize_t n = write(connfd , reinterpret_cast<const void*>(&bb) , sizeof(bb));
+		close(connfd) ; 
 	}
 	close(listenfd);
 	return 0;

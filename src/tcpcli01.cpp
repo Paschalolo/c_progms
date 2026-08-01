@@ -3,7 +3,6 @@
 #include <sys/socket.h>
 #include <unp.h>
 
-void str_cli(int fd );
 
 int main(int argc , char** argv ){
 	int sockfd ; 
@@ -24,15 +23,14 @@ int main(int argc , char** argv ){
 	if(connect(sockfd , reinterpret_cast<const struct sockaddr*>(&srvaddr) , static_cast<socklen_t>(sizeof srvaddr)) == -1)		{
 		err_sys("connection failed() ");
 	}
-	str_cli(sockfd);
-	close(sockfd);
-}
 
-void str_cli(int fd){ 
-	char  sendbuf[MAX_LINE] ;
-	[[maybe_unused]]ssize_t n ; 
-	while((n = read(0 ,sendbuf , 20 ))) {
-		auto sz = std::strlen(sendbuf);
-		n = write(fd , sendbuf ,sz );
+	char bb[sizeof(Binar_t)];
+	if(read(sockfd , bb , sizeof(Binar_t) ) < 1){
+		std::fprintf(stderr ,"Could not read binary struct from file\n");
 	}
+
+	std::printf("struct binary Binar_t a: %ld , %ld ", reinterpret_cast<Binar_t*>(bb)->m_ab_ ,reinterpret_cast<Binar_t*>(bb)->g_ );
+	close(sockfd); 
+
+	return 0;
 }

@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/tcpcli01",
-      "src/tcpcli01.cpp"
+      "./bin/tcserver",
+      "src/tcserver.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/tcpcli01.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/tcpcli01"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/tcserver.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/tcserver"
   }
 ]
