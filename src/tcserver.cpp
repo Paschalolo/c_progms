@@ -30,7 +30,9 @@ int main(){
 			continue;
 		}
 		if((childpid = fork()) == 0 ){
-
+			str_echo(connfd);
+			close(connfd) ; 
+			exit(0); 
 		}else if (childpid == -1){
 			err_sys("could not fork");
 		}
