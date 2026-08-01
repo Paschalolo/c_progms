@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/daytimesrv1",
-      "src/daytimesrv1.cpp"
+      "./bin/tcpcli01",
+      "src/tcpcli01.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/daytimesrv1.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/daytimesrv1"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/tcpcli01.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/tcpcli01"
   }
 ]
