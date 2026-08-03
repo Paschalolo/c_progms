@@ -1,5 +1,8 @@
 
 
+#include <asm-generic/socket.h>
+#include <bits/types/struct_timeval.h>
+#include <cerrno>
 #include <cstring>
 #include <memory>
 #include <netinet/in.h>
@@ -25,21 +28,22 @@ int main(){
 	}
 	char buf[MAX_LINE +1] ;
 	ssize_t ret ;
-	socklen_t len ; 
+	socklen_t len ;
+	int count = 0;
+	constexpr size_t MAXC = 4096;
+	struct timeval tv {5,0};
+	setsockopt(sockfd, SOL_SOCKET ,SO_SNDTIMEO  , reinterpret_cast<void*>(&tv), sizeof(struct timeval) );
+	setsockopt(sockfd, SOL_SOCKET ,SO_RCVTIMEO  , reinterpret_cast<void*>(&tv), sizeof(struct timeval) );
 	for(;;){
 		if((ret = recvfrom(sockfd,buf,MAX_LINE-1,0, reinterpret_cast<struct sockaddr *>(&clntaddr),&len)) == -1){
-			std::printf("err reading from udp client\n ");
-			continue;
+			if((errno == EAGAIN) || (errno == EINPROGRESS)){
+				break;
+			}else{continue;}
 		}
-		buf[ret] = 0x00 ;
-		std::printf("%ld bytes recived from client \n" , ret);
-		if(sendto(sockfd , buf , static_cast<size_t>(ret) , 0, reinterpret_cast<const struct sockaddr*>(&clntaddr) , sizeof srvaddr) == -1 ){
-			strerror(errno);
-			std::fprintf(stderr , "Could not wirte to clietn \n");
-		}
+		count++;
 
 	}
-
+	std::printf("packcets sent to server : %lu , packets received %d" ,MAXC , count );
 	close(sockfd);
 	return 0;
 }
