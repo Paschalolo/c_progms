@@ -26,14 +26,15 @@ int main(){
 	int m_kintp = 10 ;
 	struct timeval tv{1,0} ;
 	setsockopt(sockfd ,SOL_SOCKET,SO_KEEPALIVE ,&optval , sizeof optval );
-	setsockopt(sockfd ,SOL_SOCKET,SO_RCVTIMEO,&tv , sizeof optval );
+	setsockopt(sockfd ,SOL_SOCKET,SO_RCVTIMEO,&tv , sizeof tv );
+	setsockopt(sockfd ,SOL_SOCKET,SO_SNDTIMEO,&tv , sizeof tv );
 	setsockopt(sockfd ,IPPROTO_TCP, TCP_KEEPCNT  , &mkeepcnt , sizeof optval );
 	setsockopt(sockfd ,IPPROTO_TCP,TCP_KEEPIDLE ,&m_keepidle , sizeof optval );
 	setsockopt(sockfd ,IPPROTO_TCP,TCP_KEEPINTVL ,&m_kintp , sizeof optval );
 	for(;;){
 	 	connfd =accept(sockfd  , nullptr , nullptr);
 		if(connfd == -1){
-			if((errno == EAGAIN) || (errno == EWOULDBLOCK) || (errno == EINPROGRESS)){
+			if((errno == EAGAIN)  || (errno == EINPROGRESS)){
 				std::fprintf(stderr , "ERRTIMEOUT connection was closed\n");
 				break ;
 			}else {
