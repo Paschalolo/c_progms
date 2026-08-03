@@ -1,5 +1,6 @@
 
 
+#include <cstring>
 #include <memory>
 #include <netinet/in.h>
 #include <sys/socket.h>
@@ -24,14 +25,16 @@ int main(){
 	}
 	char buf[MAX_LINE +1] ;
 	ssize_t ret ;
+	socklen_t len ; 
 	for(;;){
-		if((ret = recvfrom(sockfd,buf,MAX_LINE-1,0, reinterpret_cast<struct sockaddr *>(&clntaddr),nullptr)) == -1){
+		if((ret = recvfrom(sockfd,buf,MAX_LINE-1,0, reinterpret_cast<struct sockaddr *>(&clntaddr),&len)) == -1){
 			std::printf("err reading from udp client\n ");
 			continue;
 		}
 		buf[ret] = 0x00 ;
 		std::printf("%ld bytes recived from client \n" , ret);
 		if(sendto(sockfd , buf , static_cast<size_t>(ret) , 0, reinterpret_cast<const struct sockaddr*>(&clntaddr) , sizeof srvaddr) == -1 ){
+			strerror(errno);
 			std::fprintf(stderr , "Could not wirte to clietn \n");
 		}
 
