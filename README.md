@@ -4,7 +4,7 @@ Programs here cover interacting the os system calls
 memory mapping , networking both conectionless and connection orirented streams . 
 Other  distrubuted systen i.e multicasting , broadcasting 
 Network programming at its finest . 
-
+We write a runtime dynamic loader and also a feature of readelf or objdump capable of extracting symbols from an executable .
 ```nasm
 section .text
     global _start
