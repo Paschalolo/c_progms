@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/tcserver",
-      "src/tcserver.cpp"
+      "./bin/tcp_timeout",
+      "src/tcp_timeout.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/tcserver.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/tcserver"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/tcp_timeout.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/tcp_timeout"
   }
 ]
