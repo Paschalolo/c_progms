@@ -11,7 +11,7 @@ int main(){
 	struct addrinfo *res ; 
 	hints.ai_family = AF_UNSPEC ; 
 	hints.ai_socktype = 0  ; 
-	if (getaddrinfo("www.google.com", "https", &hints, &res) != 0 ) {
+	if (getaddrinfo("google.com", "https", &hints, &res) != 0 ) {
 		err_sys("Failed lookup");
 	}
 	auto r_ptr = res ; 
