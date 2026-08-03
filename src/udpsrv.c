@@ -69,7 +69,7 @@ int main(int argc , char** argv ){
 	while(true){
 		errno = 0 ; 
 		inbuf[0] = 0x00;
-		ret = recvfrom(sfd,(void*)inbuf , (size_t)BUFLEN , 0 , (struct sockaddr* restrict )&clntaddr, ( socklen_t* restrict)&clntaddr_sz);
+		ret = recvfrom(sfd,(void*)inbuf , (size_t)BUFLEN , 0 , (struct sockaddr*  )&clntaddr, ( socklen_t* )&clntaddr_sz);
 	/*Process the request */
 		if(ret > 0){
 		inbuf[ret] = 0x00 ; 

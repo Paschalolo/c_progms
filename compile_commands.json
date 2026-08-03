@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/tcp_timeout",
-      "src/tcp_timeout.cpp"
+      "./bin/udpsrvt1",
+      "src/udpsrvt1.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/tcp_timeout.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/tcp_timeout"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/udpsrvt1.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/udpsrvt1"
   }
 ]
