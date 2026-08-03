@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/udpcltt1",
-      "src/udpcltt1.cpp"
+      "./bin/getnam",
+      "src/getnam.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/udpcltt1.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/udpcltt1"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/getnam.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/getnam"
   }
 ]
