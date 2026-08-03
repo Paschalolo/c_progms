@@ -10,7 +10,8 @@ int main(){
 	struct addrinfo hints {}; 
 	struct addrinfo *res ; 
 	hints.ai_family = AF_UNSPEC ; 
-	hints.ai_socktype = 0  ; 
+	hints.ai_socktype = 0  ;
+	hints.ai_flags = AI_CANONNAME;
 	if (getaddrinfo("google.com", "https", &hints, &res) != 0 ) {
 		err_sys("Failed lookup");
 	}
