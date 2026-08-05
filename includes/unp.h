@@ -12,6 +12,7 @@
 #include <cstdlib>
 #include <sys/utsname.h>
 #include <cstring>
+#include <sys/un.h>
 #include <arpa/inet.h>
 #include <time.h>
 #include <poll.h>

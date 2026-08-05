@@ -25,11 +25,11 @@
       "src",
       "-std=c++23",
       "-o",
-      "./bin/getnam",
-      "src/getnam.cpp"
+      "./bin/unix_domain",
+      "src/unix_domain.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/getnam.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/getnam"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/unix_domain.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/unix_domain"
   }
 ]
