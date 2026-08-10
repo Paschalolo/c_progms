@@ -5,6 +5,7 @@ memory mapping , networking both conectionless and connection orirented streams 
 Other  distrubuted systen i.e multicasting , broadcasting 
 Network programming at its finest . 
 We write a runtime dynamic loader and also a feature of readelf or objdump capable of extracting symbols from an executable .
+We experiment on new linux tools for greater perfromance AF_XDP , io_uring .It gets complex and we fight cache lines and tlb eviction . Its better to aviod sharing 
 ```nasm
 section .text
     global _start
