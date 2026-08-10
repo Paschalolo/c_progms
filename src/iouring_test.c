@@ -83,12 +83,13 @@ int read_from_cq(){
 
 	unsigned int head ; 
 	head =(unsigned int) atomic_load_explicit((_Atomic(unsigned int)*)cring_head , memory_order_acquire);
-	if (head == *cring_tail){
-		return -1;
-	}
+	while(head == atomic_load_explicit((_Atomic(unsigned int)*)cring_tail, memory_order_acquire)){
+		usleep(1000);}
+	read_barrier();
 	cqe = &cqes[head & *cring_mask];
 	if(cqe->res   <  0 ){
 		fprintf(stderr , "Error ocuured int he file \n");
+
 	}
 	head++;
 	atomic_store_explicit((_Atomic(unsigned int)*)cring_head , head , memory_order_release);
@@ -105,6 +106,7 @@ int submit_to_sq(int fd , int op ){
 	sqe->opcode = (unsigned char)op ; 
 	sqe->fd = fd ; 
 	sqe->addr = (unsigned long )buff ;
+	sqe->off = (size_t)offset;
 	if((unsigned char)op == IORING_OP_READ){
 		memset(buff , 0x00 , BLOCK_SZ); 
 		sqe->len = BLOCK_SZ ; 
@@ -113,12 +115,13 @@ int submit_to_sq(int fd , int op ){
 	}
 
 	sring_array[index] = index ; 
-	tail++ ; 
+	tail++ ;
+	write_barrier();
 	atomic_store_explicit((_Atomic(unsigned)*)sring_tail , tail , memory_order_release);
 
 
 	int ret = io_uring_enter((unsigned)ring_fd , 1, 1,IORING_ENTER_GETEVENTS);
-	if(ret < 0 ) return 1;
+	if(ret < 0 ) { perror("iouring enter") ; return -1;}
 	return  ret ; 
 }
 int main(){
@@ -134,12 +137,13 @@ int main(){
 		res = read_from_cq();
 		if(res > 0 ) {
 			submit_to_sq(STDIN_FILENO,IORING_OP_WRITE);
+			read_from_cq();
 		}else if(res == 0 ){
 			break ;
 		}else {
 			fprintf(stderr , "Error here %s\n" , strerror(abs(res)));
-			break ; 
-		}
+			break;
+	}
 		offset += res;
 	}
 	close(ring_fd);
