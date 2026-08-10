@@ -41,12 +41,14 @@ int app_setup(){
 
 	ring_fd = io_uring_setup(QUEUE_DEPTH , &p); 
 	if(ring_fd <0  ){
+		perror("erro setup");
 		return 1;
 	}
 	size_t  sring_sz = p.sq_off.array + (p.sq_entries * sizeof(unsigned));
 	size_t cring_sz = p.cq_off.cqes + (sizeof(struct io_uring_cqe) * p.cq_entries);
 	
 	if(!(p.features & IORING_FEAT_SINGLE_MMAP)){
+		perror("requires 3 mmap");
 		return 1;
 	}
 	if(sring_sz > cring_sz){
@@ -54,15 +56,16 @@ int app_setup(){
 	}else{sring_sz = cring_sz ; }
 
 	sq_ptr = mmap(0, sring_sz , PROT_READ | PROT_WRITE , MAP_ANONYMOUS | MAP_SHARED , ring_fd ,IORING_OFF_SQ_RING ); 
-	if(sq_ptr == MAP_FAILED) {return 1;}
+	if(sq_ptr == MAP_FAILED) {perror("mmap failed");return 1;}
 
 	cq_ptr = sq_ptr ; 
 	sring_tail = (unsigned int*)((char*)sq_ptr + p.sq_off.tail) ;
 	sring_mask = (unsigned int*)((char*)sq_ptr + p.sq_off.ring_mask) ;
 	sring_array = (unsigned int*)((char*)sq_ptr + p.sq_off.array) ;
 	
-	sqes = mmap(0 , p.sq_entries * sizeof(struct io_uring_sqe) , PROT_READ |PROT_WRITE , MAP_ANONYMOUS| MAP_POPULATE , ring_fd , IORING_OFF_SQES);
+	sqes = mmap(0 , p.sq_entries * sizeof(struct io_uring_sqe) , PROT_READ |PROT_WRITE , MAP_SHARED | MAP_POPULATE ,ring_fd , IORING_OFF_SQES);
 	if(sqes == MAP_FAILED){
+		perror(strerror(errno));
 		return 1;
 	
 	}
