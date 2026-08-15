@@ -26,10 +26,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/fileiocopy1.c"
+      "src/fileio_readv.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/fileiocopy1.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/fileio_readv.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
