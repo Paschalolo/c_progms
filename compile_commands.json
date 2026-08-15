@@ -26,10 +26,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/iouring_test.c"
+      "src/gnu_ver.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/iouring_test.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/gnu_ver.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
