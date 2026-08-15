@@ -3,12 +3,13 @@ MFILE = $(FILE).cpp
 MCFILE= $(FILE).c
 GCC = g++-14
 GC = gcc-14
-GCCFLAGS = -Wall -Wextra -Werror -Wpedantic -Wnull-dereference  -Wshadow -mavx2 -Wconversion -Wduplicated-branches -Wlogical-op -O3  -Wformat=2   -pthread -mavx2 -march=native -fno-exceptions -fno-rtti 
+GCCFLAGS = -Wall -Wextra -Werror -Wpedantic -Wnull-dereference  -Wshadow -mavx2 -Wconversion -Wduplicated-branches -Wlogical-op -O3  -Wformat=2   -pthread -mavx2 -march=native -fno-exceptions 
 CPP23 = -std=c++23
-C23 = -std=c23 
+C23 = -std=c23
+NORTT= -fno-rtti
 INCLUDES = -I includes -I src
 SSL = -lssl -lcrypto
-COMPILE.cc = $(GCC) $(GCCFLAGS) $(INCLUDES) $(CPP23)
+COMPILE.cc = $(GCC) $(GCCFLAGS) $(INCLUDES) $(NORTT) $(CPP23)
 COMPILE.c = $(GC) $(GCCFLAGS) $(INCLUDES) $(C23)
 OBJ_DIR = src
 OBJS = $(wildcard $(OBJ_DIR)/*.o)
