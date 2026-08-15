@@ -7,7 +7,40 @@
 #include <sys/uio.h>
 #include <unistd.h>
 
+/* Simple implemantation fo libiovec  for vectored io*/
 
+struct p_iovec_t {
+	char *iov_base ;
+	size_t iov_len;
+};
+
+ssize_t readv_p(int fd , struct p_iovec_t* iov , int iovcnt ){
+	ssize_t ret = 0 ;
+	ssize_t bytes_read ;
+	for(int i = 0 ; i < iovcnt ; i++){
+		bytes_read = read(fd, iov[i].iov_base , iov[i].iov_len);
+		if(bytes_read >= 0 ) {ret += bytes_read ; 
+		}else if (bytes_read == -1){
+			ret = -1 ; 
+			break ;
+		}
+
+	}
+	return ret ;
+}
+ssize_t writev_p(int fd , struct p_iovec_t* iov , int iovcnt ){
+	ssize_t ret = 0 ; 
+	ssize_t bytes_written ;
+	for(int i = 0 ; i < iovcnt ; i++){
+		bytes_written = write(fd , iov[i].iov_base , iov[i].iov_len);
+		if(bytes_written >= 0) {ret += bytes_written ; 
+		}else if(bytes_written == -1 ){
+			ret = -1 ; 
+			break ;
+		}
+	}
+	return ret ;
+}
 int main(int argc , char** argv ){
 	int fd ; 
 	struct iovec iov[3] ; 
