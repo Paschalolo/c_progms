@@ -26,10 +26,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/gg_time1.c"
+      "src/timea1.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/gg_time1.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/timea1.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
