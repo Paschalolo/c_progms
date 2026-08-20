@@ -26,10 +26,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/direct_read1.c"
+      "src/buf_issues.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/direct_read1.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/buf_issues.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
