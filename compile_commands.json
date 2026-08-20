@@ -26,10 +26,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/buf_issues.c"
+      "src/path_ext.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/buf_issues.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/path_ext.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
