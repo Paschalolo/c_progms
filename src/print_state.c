@@ -1,4 +1,5 @@
 #include <errno.h>
+#include <stddef.h>
 #include <stdio.h>
 #include <fcntl.h>
 #include <string.h>
@@ -10,24 +11,24 @@ __attribute__((noinline , cold)) void err_exit(int a) {
 
 	exit(a);
 }
+
+constexpr size_t SZ = 1024 ;
 int main(){
 	int fd ; 
 	ssize_t rett ; 
-	if((fd = open("/proc/self/status" , O_RDONLY , S_IRUSR )) == -1 ){
+	if((fd = open("/proc/self/status" , O_RDONLY ,  S_IRWXU )) == -1 ){
 		err_exit(-1);
 		}
-	struct stat buf ; 
-	if(fstat(fd , &buf) == -1) return -2;
-	printf("%ld" ,buf.st_size);
-	char* alloc_buf  = (char*)aligned_alloc(8, (size_t)buf.st_size);
-	if(!alloc_buf) {
+	char* alloc_buf  = (char*)aligned_alloc(8,SZ );
+	if(alloc_buf == NULL) {
 		return -4 ;
 	}
-	if( (rett = read(fd , alloc_buf ,(size_t)buf.st_size ))  < 0 ){
+	if( (rett = read(fd , alloc_buf ,SZ))  < 1 ){
+		free(alloc_buf) ; 
 		fprintf(stderr , "read failed %s \n" , strerror(errno));return -3;
 	}
-	alloc_buf[buf.st_size] = 0x00 ;
-	printf("%s\n", alloc_buf);
+	alloc_buf[rett] = 0x00 ;
+	printf("%s", alloc_buf);
 	free(alloc_buf) ; 
 	return 0 ; 
 }
