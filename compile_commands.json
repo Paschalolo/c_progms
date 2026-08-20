@@ -26,10 +26,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/procfs_pidmax.c"
+      "src/t_name1.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/procfs_pidmax.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/t_name1.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
