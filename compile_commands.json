@@ -26,10 +26,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/inotify1a.c"
+      "src/sig1.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/inotify1a.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/sig1.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
