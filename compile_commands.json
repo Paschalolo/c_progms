@@ -26,10 +26,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/gisac1a.c"
+      "src/signonloc1.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/gisac1a.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/signonloc1.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
