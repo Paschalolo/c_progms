@@ -26,10 +26,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/sig1.c"
+      "src/gisac1.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/sig1.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/gisac1.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
