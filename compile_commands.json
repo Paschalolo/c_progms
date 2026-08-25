@@ -1,7 +1,7 @@
 [
   {
     "arguments": [
-      "/usr/bin/gcc-14",
+      "/usr/bin/g++-14",
       "-c",
       "-Wall",
       "-Wextra",
@@ -23,13 +23,14 @@
       "includes",
       "-I",
       "src",
-      "-std=c23",
+      "-fno-rtti",
+      "-std=c++23",
       "-o",
-      "./bin/ch",
-      "src/sqqueu.c"
+      "./bin/sleeep_nan1",
+      "src/sleeep_nan1.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/sqqueu.c",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/sleeep_nan1.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/sleeep_nan1"
   }
 ]
