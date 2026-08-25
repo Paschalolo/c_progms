@@ -26,11 +26,11 @@
       "-fno-rtti",
       "-std=c++23",
       "-o",
-      "./bin/sleeep_nan1",
-      "src/sleeep_nan1.cpp"
+      "./bin/t_fork",
+      "src/t_fork.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/sleeep_nan1.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/sleeep_nan1"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/t_fork.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/t_fork"
   }
 ]
