@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <setjmp.h>
 #include <string.h>
-
+#include <stdlib.h>
 
 static volatile sig_atomic_t canJump = 0 ; 
 static jmp_buf env ; 
@@ -28,11 +28,14 @@ int main(){
 
 	printf("calling sig jump ");
 
-	if(setjmp(env) == 0)	canJump =1;
+	canJump =1;
 
+	if(setjmp(env ) == 1){
+		printf("finni\n");
+		exit(0);
+	}
 	for(;;) {
 		printf("how dy\n");
 		sleep(3);}
-	if(setjmp(env ) == 1)printf("finni\n");
 	return 0 ;
 }
