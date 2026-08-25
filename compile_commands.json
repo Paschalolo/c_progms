@@ -26,10 +26,10 @@
       "-std=c23",
       "-o",
       "./bin/ch",
-      "src/signonloc1.c"
+      "src/sqqueu.c"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/signonloc1.c",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/sqqueu.c",
     "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
   }
 ]
