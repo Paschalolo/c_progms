@@ -1,11 +1,10 @@
 
 
 #include <unistd.h>
+#include <stdlib.h>
 
-
-char GREET[] { "GREET=salut" };
+[[maybe_unused]] char GREET[] { "GREET=salut" };
 int main(){
-	char * argvec[10] ;
-	char* envec[] = { GREET ,  nullptr};
+if(	system("ls | wc") == -1) exit(-1);
 	return 0  ;
 }

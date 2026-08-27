@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "arguments": [
+      "/usr/bin/g++-14",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wpedantic",
+      "-Wnull-dereference",
+      "-Wshadow",
+      "-mavx2",
+      "-Wconversion",
+      "-Wduplicated-branches",
+      "-Wlogical-op",
+      "-O3",
+      "-Wformat=2",
+      "-pthread",
+      "-mavx2",
+      "-march=native",
+      "-fno-exceptions",
+      "-I",
+      "includes",
+      "-I",
+      "src",
+      "-fno-rtti",
+      "-std=c++23",
+      "-o",
+      "./bin/progexec1a",
+      "src/progexec1a.cpp"
+    ],
+    "directory": "/home/paschalolo/studyWeb/sys_p",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/progexec1a.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/progexec1a"
+  }
+]
