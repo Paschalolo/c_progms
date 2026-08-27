@@ -26,11 +26,11 @@
       "-fno-rtti",
       "-std=c++23",
       "-o",
-      "./bin/clone1",
-      "src/clone1.cpp"
+      "./bin/ptse",
+      "src/ptse.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/clone1.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/clone1"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/ptse.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/ptse"
   }
 ]
