@@ -26,11 +26,11 @@
       "-fno-rtti",
       "-std=c++23",
       "-o",
-      "./bin/acct_n",
-      "src/acct_n.cpp"
+      "./bin/clone1",
+      "src/clone1.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/acct_n.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/acct_n"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/clone1.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/clone1"
   }
 ]
