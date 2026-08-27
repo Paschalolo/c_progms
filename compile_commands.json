@@ -26,11 +26,11 @@
       "-fno-rtti",
       "-std=c++23",
       "-o",
-      "./bin/progexec1a",
-      "src/progexec1a.cpp"
+      "./bin/acct_n",
+      "src/acct_n.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/progexec1a.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/progexec1a"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/acct_n.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/acct_n"
   }
 ]
