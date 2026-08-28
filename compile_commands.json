@@ -26,11 +26,11 @@
       "-fno-rtti",
       "-std=c++23",
       "-o",
-      "./bin/ptse",
-      "src/ptse.cpp"
+      "./bin/getpp1a",
+      "src/getpp1a.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/ptse.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/ptse"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/getpp1a.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/getpp1a"
   }
 ]
