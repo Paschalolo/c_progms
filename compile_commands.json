@@ -26,11 +26,11 @@
       "-fno-rtti",
       "-std=c++23",
       "-o",
-      "./bin/getpp1a",
-      "src/getpp1a.cpp"
+      "./bin/dynload",
+      "src/dynload.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/getpp1a.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/getpp1a"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/dynload.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/dynload"
   }
 ]
