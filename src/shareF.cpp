@@ -12,7 +12,7 @@ constexpr size_t MEM_SIZE {10};
 int main(int argc , char ** argv ) {
 	char* addr ; 
 	int fd ;
-	if (argc  < 2 ) {errMsg("no args \n" , ERRMSG_NOSET , -1);}
+	if (argc  < 3 ) {errMsg("no args \n" , ERRMSG_NOSET , -1);}
 	
 	fd = open(argv[1] , O_RDWR, S_IRUSR);
 	if(fd == -1 ) exit(-1);
@@ -23,7 +23,7 @@ int main(int argc , char ** argv ) {
 	addr[MEM_SIZE -1 ] = 0x00 ; 
 	std::printf("Current string = %s\n" ,  addr);
 
-	std::strncpy(addr , argv[2] , MEM_SIZE-2 );
+	std::strncpy(addr , argv[2] , MEM_SIZE- 1 );
 
 	if(msync(addr , MEM_SIZE , MS_SYNC)== -1) errMsg("msync failed " , ERRMSG_NOSET , -1);
 	std::printf("Printed to shared memory\n");
