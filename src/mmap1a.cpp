@@ -20,5 +20,7 @@ int main( int argc , char** argv){
 
 	ssize_t sz = write(STDOUT_FILENO , addr , static_cast<size_t>(sb.st_size));
 	if(sz == -1 ) return -1;
+	munmap(addr , static_cast<size_t>(sb.st_size));
 	return 0 ;
+
 }
