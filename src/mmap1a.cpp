@@ -19,6 +19,6 @@ int main( int argc , char** argv){
 	if(addr == MAP_FAILED) errMsg("Mmap failed\n", ERRMSG_NOSET , -1);
 
 	ssize_t sz = write(STDOUT_FILENO , addr , static_cast<size_t>(sb.st_size));
-
+	if(sz == -1 ) return -1;
 	return 0 ;
 }
