@@ -26,11 +26,11 @@
       "-fno-rtti",
       "-std=c++23",
       "-o",
-      "./bin/mmap1a",
-      "src/mmap1a.cpp"
+      "./bin/shareF",
+      "src/shareF.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/mmap1a.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/mmap1a"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/shareF.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/shareF"
   }
 ]
