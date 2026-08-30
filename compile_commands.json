@@ -26,11 +26,11 @@
       "-fno-rtti",
       "-std=c++23",
       "-o",
-      "./bin/dynload",
-      "src/dynload.cpp"
+      "./bin/mmap1a",
+      "src/mmap1a.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/dynload.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/dynload"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/mmap1a.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/mmap1a"
   }
 ]
