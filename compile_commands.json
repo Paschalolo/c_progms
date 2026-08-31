@@ -26,11 +26,11 @@
       "-fno-rtti",
       "-std=c++23",
       "-o",
-      "./bin/shareF",
-      "src/shareF.cpp"
+      "./bin/mprotect1a",
+      "src/mprotect1a.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/shareF.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/shareF"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/mprotect1a.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/mprotect1a"
   }
 ]
