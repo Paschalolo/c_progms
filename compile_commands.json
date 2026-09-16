@@ -26,11 +26,11 @@
       "-fno-rtti",
       "-std=c++23",
       "-o",
-      "./bin/mprotect1a",
-      "src/mprotect1a.cpp"
+      "./bin/ll1",
+      "src/ll1.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/mprotect1a.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/mprotect1a"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/ll1.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/ll1"
   }
 ]
