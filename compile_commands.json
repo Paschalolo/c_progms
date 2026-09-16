@@ -26,11 +26,11 @@
       "-fno-rtti",
       "-std=c++23",
       "-o",
-      "./bin/ll1",
-      "src/ll1.cpp"
+      "./bin/ll2",
+      "src/ll2.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/sys_p",
-    "file": "/home/paschalolo/studyWeb/sys_p/src/ll1.cpp",
-    "output": "/home/paschalolo/studyWeb/sys_p/bin/ll1"
+    "file": "/home/paschalolo/studyWeb/sys_p/src/ll2.cpp",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/ll2"
   }
 ]
