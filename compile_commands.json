@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc-14",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wpedantic",
+      "-Wnull-dereference",
+      "-Wshadow",
+      "-mavx2",
+      "-Wconversion",
+      "-Wduplicated-branches",
+      "-Wlogical-op",
+      "-O3",
+      "-Wformat=2",
+      "-pthread",
+      "-mavx2",
+      "-march=native",
+      "-fno-exceptions",
+      "-I",
+      "includes",
+      "-I",
+      "src",
+      "-std=c23",
+      "-o",
+      "./bin/ch",
+      "src/ls_script.c"
+    ],
+    "directory": "/home/paschalolo/studyWeb/sys_p",
+    "file": "/home/paschalolo/studyWeb/sys_p/src/ls_script.c",
+    "output": "/home/paschalolo/studyWeb/sys_p/bin/ch"
+  }
+]
